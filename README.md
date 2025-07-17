@@ -10,36 +10,36 @@ Verzeichnisstruktur:
 
 Im Projektverzeichnis befinden sich folgende Ordner und Dateien:
 
+## Verzeichnisstruktur
 
+```text
 Semesteraufgabe Webtech/
-│
-├── buecher-app/                → Angular-Frontend
-│   ├── seiten/                → Enthält die Bücherliste-Komponente
+├── buecher-app/               # Angular-Frontend
+│   ├── seiten/                # Enthält die Bücherliste-Komponente
 │   │   ├── buecherliste.ts
 │   │   ├── buecherliste.html
 │   │   ├── buecherliste.css
 │   │   └── buecherliste.spec.ts
-│   ├── shared/                → Enthält Buch-Service und Datenmodell
+│   ├── shared/                # Buch-Service und Datenmodell
 │   │   ├── buch.service.ts
 │   │   └── buch.ts
 │   ├── app.ts
 │   ├── main.ts
 │   ├── angular.json
 │   └── package.json
-│
-├── backend/                   → Node.js-Backend mit PostgreSQL
+├── backend/                   # Node.js-Backend mit PostgreSQL
 │   ├── server.js
 │   ├── routes.js
 │   ├── db.js
 │   ├── initdb.js
 │   ├── .env
 │   └── package.json
-│
-├── Screenshots/               → Abbildungen der Anwendung für die README
-│     
-│
-├── .gitignore                 → Ausschluss technischer Dateien 
-└── README.md                  → Projektbeschreibung und Anleitung
+├── Screenshots/               # Abbildungen der Anwendung für die README
+├── .gitignore                 # Ausschluss technischer Dateien
+└── README.md                  #
+
+
+Projektbeschreibung und Anleitung
 
 Installation und Ausführung:
 
