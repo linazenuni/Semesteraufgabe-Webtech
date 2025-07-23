@@ -1,0 +1,18 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right,#1d5671 , #ffffff);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+h2, h4 {
+  color: #257699;
+}
+
+input::placeholder {
+  font-style: italic;
+  color: #13020b;
+}
+
+

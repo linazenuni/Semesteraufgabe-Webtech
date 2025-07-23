@@ -1,0 +1,77 @@
+<div class="container px-4 my-5 text-center">
+  <h2 class="mb-1 text-muted fst-italic">Wortschatz : Deine Welt in Büchern</h2>
+  <div *ngIf="fehlerBeimLaden" class="alert alert-danger my-3">
+   Fehler beim Laden der Bücher – bitte prüfen Sie die Verbindung zum Server.
+</div>
+
+
+
+  
+  <div class="card shadow p-4 mb-4 text-start">
+    <h6 class="mb-3">Neues Buch hinzufügen</h6>
+    <form [formGroup]="buchForm" (ngSubmit)="buchHinzufuegen()">
+      <div class="row g-3">
+        
+        
+        <div class="col-md-5">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Titel"
+            formControlName="titel" />
+          <div *ngIf="buchForm.get('titel')?.invalid && (buchForm.get('titel')?.touched || buchForm.get('titel')?.dirty)" class="text-danger mt-1">
+            Bitte gib einen Titel ein.
+          </div>
+        </div>
+
+        
+        <div class="col-md-5">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Autor"
+            formControlName="autor" />
+          <div *ngIf="buchForm.get('autor')?.invalid && (buchForm.get('autor')?.touched || buchForm.get('autor')?.dirty)" class="text-danger mt-1">
+            Bitte gib einen Autor ein.
+          </div>
+          </div>
+
+
+        
+        <div class="col-md-2 d-grid">
+          <button
+            class="btn btn-animated w-100"
+            type="submit"
+            [disabled]="buchForm.invalid">
+            ➕ Hinzufügen
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <hr />
+
+  
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    <div *ngFor="let buch of buecher; let i = index" class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ buch.titel }}</h5>
+          <p class="card-text"><em>{{ buch.autor }}</em></p>
+          
+
+        </div>
+        <div class="card-footer bg-transparent border-0 text-end">
+          <button class="btn btn-outline-danger btn-sm" (click)="buchLoeschen(i)">
+            🗑️ Löschen
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
